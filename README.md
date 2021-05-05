@@ -1,3 +1,8 @@
+  <!-- <li class="nav-item">
+                        <a href="{% url 'products:list' %}" class="nav-link lead mr-4 font-weight-bold">Produtos</a>
+                    </li> -->
+
+
 criar pasta
 git init
 criar env / source <nameenv>/bin/activate
