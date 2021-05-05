@@ -1,7 +1,16 @@
-  <!-- <li class="nav-item">
-                        <a href="{% url 'products:list' %}" class="nav-link lead mr-4 font-weight-bold">Produtos</a>
-                    </li> -->
+{% load widget_tweaks %}
 
+ {% render_field form.quantity class+="form-control ml-sm-3" %}
+
+     <form class="form-group" action="{% url 'cart:add' product.id %}" method="post">
+                <p class="form-inline">
+                    {{ form.quantity.label_tag }}
+                   
+                    {{ form.override }}
+                </p>
+                {% csrf_token %}
+                <input class="btn btn-success" type="submit" value="Adicionar ao Carrinho">
+            </form>
 
 criar pasta
 git init
