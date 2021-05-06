@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-#from payments.models import Payment
+from payments.models import Payment
 
 from .models import Item, Order
 
@@ -12,7 +12,7 @@ class ItemInline(admin.TabularInline):
 
 
 class PaymentInline(admin.TabularInline):
-   # model = Payment
+    model = Payment
     can_delete = False
     readonly_fields = (
         "email",
@@ -36,4 +36,4 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = ["__str__", "name", "email", "cpf", "paid", "created", "modified"]
     list_filter = ["paid", "created", "modified"]
     search_fields = ["name", "email", "cpf"]
-    #inlines = [ItemInline, PaymentInline]
+    inlines = [ItemInline, PaymentInline]

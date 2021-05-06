@@ -1,5 +1,3 @@
-{% url 'orders:create' %}
-
 criar pasta
 git init
 criar env / source <nameenv>/bin/activate
